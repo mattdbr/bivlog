@@ -1,0 +1,19 @@
+All reports are case insensitive:
+
+'sitrep'
+'casevac'
+'contact'
+'bushfire'
+'noticas'
+'flood'
+'maintdem'
+'lost' (or 'lost person')
+'chat'
+
+To exit the program:
+
+'finish' (when prompted for a report type) 
+
+Entire radio log will be output into log.txt in the folder.
+
+*PLEASE ENSURE SYSTEM TIME IS CONFIGURED TO LOCAL TIME (RADIO TIMINGS TAKEN OFF THAT)*
