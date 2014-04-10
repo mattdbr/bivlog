@@ -12,7 +12,8 @@ All reports are case insensitive:
 
 To exit the program:
 
-'finish' (when prompted for a report type) 
+'finish' (when prompted for a report type). If finish is not entered the file won't save
+(Computer limitation not mine)
 
 Entire radio log will be output into log.txt in the folder.
 
