@@ -160,9 +160,9 @@ function flood(){
     document.getElementById('flood_direcspeed').value = '';
     document.getElementById('flood_terrain').value = '';
     document.getElementById('flood_numberperson').value = '';
-    document.getElementById('flood_danger').value = '';
+    document.getElementById('flood_route').value = '';
     document.getElementById('flood_actiontaken').value = '';
     document.getElementById('flood_casualties').value = '';
-    document.getElementById('flood_route').value = '';
+    document.getElementById('flood_comments').value = '';
     document.getElementById('flood_info').value = '';
 }
