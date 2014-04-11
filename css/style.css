@@ -4,7 +4,8 @@
 }
 #output{
 	width:100%;
-	height:20em;
+	height:25em;
+	resize:none;
 }
 #printbtn{
 	margin-top:1em;

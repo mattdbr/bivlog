@@ -166,3 +166,59 @@ function flood(){
     document.getElementById('flood_comments').value = '';
     document.getElementById('flood_info').value = '';
 }
+function maintdem(){
+    var alpha = document.getElementById('maintdem_callsign').value,
+        bravo = document.getElementById('maintdem_grid').value,
+        charlie = document.getElementById('maintdem_supplies').value,
+        delta = document.getElementById('maintdem_timeloc').value,
+        echo = document.getElementById('maintdem_info').value,
+        output = document.getElementById('output').value,
+        time = new Date(),
+        time = String(time),
+        time = time.substring(0, 21),
+        out = time + ' | MAINTDEM | Callsign: '  + alpha + ' | Location (grid reference): ' + bravo + ' | Supplies required: ' + charlie + ' | Time and location: ' + delta + ' | Other info: ' + echo + '\n';
+    document.getElementById('output').value = output  + out;
+    document.getElementById('maintdem_callsign').value = '';
+    document.getElementById('maintdem_grid').value = '';
+    document.getElementById('maintdem_supplies').value = '';
+    document.getElementById('maintdem_timeloc').value = '';
+    document.getElementById('maintdem_info').value = '';
+};
+function lost(){
+    var duff = document.getElementById('lost_duff').value,
+        alpha = document.getElementById('lost_callsign').value,
+        bravo = document.getElementById('lost_grid').value,
+        charlie = document.getElementById('lost_person').value,
+        delta = document.getElementById('lost_last').value,
+        echo = document.getElementById('lost_assistance').value,
+        foxtrot = document.getElementById('lost_crossroads').value,
+        golf = document.getElementById('lost_action').value,
+        output = document.getElementById('output').value,
+        time = new Date(),
+        time = String(time),
+        time = time.substring(0, 21),
+        out = time + ' | Lost person | Duff or excercise: '  + duff + ' | Callsign: ' + alpha + ' | Location: ' + bravo + ' | Lost person: ' + charlie + ' | Last seen: ' + delta + ' | Assistance required: ' + echo + ' | Nearest crossroads: ' + foxtrot + ' | Action taken: ' + golf + '\n';
+    document.getElementById('output').value = output  + out;
+    document.getElementById('lost_duff').value = '';
+    document.getElementById('lost_callsign').value = '';
+    document.getElementById('lost_grid').value = '';
+    document.getElementById('lost_person').value = '';
+    document.getElementById('lost_last').value = '';
+    document.getElementById('lost_assistance').value = '';
+    document.getElementById('lost_crossroads').value = '';
+    document.getElementById('lost_action').value = '';
+};
+function chat(){
+    var alpha = document.getElementById('chat_sender').value,
+        bravo = document.getElementById('chat_reciever').value,
+        charlie =document.getElementById('chat_details').value,
+        output = document.getElementById('output').value,
+        time = new Date(),
+        time = String(time),
+        time = time.substring(0, 21),
+        out = time + ' | Chat | Sender: ' + alpha + ' | Reciever: ' + bravo + ' | Message details: ' + charlie + '\n';
+    document.getElementById('output').value = output  + out;
+    document.getElementById('chat_sender').value = '';
+    document.getElementById('chat_reciever').value = '';
+    document.getElementById('chat_details').value = '';
+}

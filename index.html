@@ -6,13 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Radio call logger">
 	<meta name="author" content="Matthew Brenner, Mitchell McMillan">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	<script type='text/javscript' src='http://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.1/jquery.autosize.min.js'></script>
-	<script type="text/javascript" src="scripts.js"></script>
-	<link type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-	<link type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link type="text/css" href="style.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link type="text/css" href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -171,12 +170,12 @@
 						<input class='form-control singleText' id='maintdem_callsign' placeholder='Enter callsign' type='text'>
 						<input class='form-control singleText' id='maintdem_grid' placeholder='Enter grid reference' type='text'>
 						<br><br>
-						<input class='form-control singleText' id='maindem_supplies' placeholder='Enter supplies required' type='text'>
+						<input class='form-control singleText' id='maintdem_supplies' placeholder='Enter supplies required' type='text'>
 						<input class='form-control singleText' id='maintdem_timeloc' placeholder='Enter time and location' type='text'>
 						<br><br>
 						<input class='form-control singleText' id='maintdem_info' placeholder='Enter any info' type='text'>
 						<br><br>
-						<button type='button' class='btn btn-default' id='maintdembtn'>Submit</button>
+						<button type='button' class='btn btn-default' id='maintdembtn' onclick='maintdem()'>Submit</button>
 					</div>
 					<div class="tab-pane" id="panel-8">
 						<br>
@@ -190,9 +189,9 @@
 						<input class='form-control singleText' id='lost_assistance' placeholder='Enter assistance required' type='text'>
 						<br><br>
 						<input class='form-control singleText' id='lost_crossroads' placeholder='Enter nearest crossroads' type='text'>
-						<input class='form-control singleText' id='lost_action' placeholder='Enter number of persons' type='text'>
+						<input class='form-control singleText' id='lost_action' placeholder='Action taken' type='text'>
 						<br><br>
-						<button type='button' class='btn btn-default' id='lostbtn'>Submit</button>
+						<button type='button' class='btn btn-default' id='lostbtn' onclick='lost()'>Submit</button>
 					</div>
 					<div class="tab-pane" id="panel-9">
 						<br>
@@ -202,7 +201,7 @@
 						<br><br>
 						<input class='form-control singleText' id='chat_details' placeholder='Enter Details of transmission' type='text'>
 						<br><br>
-						<button type='button' class='btn btn-default' id='chatbtn'>Submit</button>
+						<button type='button' class='btn btn-default' id='chatbtn' onclick='chat()'>Submit</button>
 					</div>
 					<div class="tab-pane" id="panel-10">
 						<br>
