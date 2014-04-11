@@ -1,7 +1,14 @@
-input{
+.singleText{
 	width:33em;
+	display:inline;
 }
 #output{
-	width:70em;
+	width:100%;
 	height:20em;
+}
+#printbtn{
+	margin-top:1em;
+}
+#printtext{
+	display:none;
 }
