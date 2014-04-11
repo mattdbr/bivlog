@@ -10,6 +10,13 @@ function sitrep(){
 		echo = document.getElementById('sitrep_equipment').value,
 		foxtrot = document.getElementById('sitrep_morale').value,
 		golf = document.getElementById('sitrep_comments').value,
-		out = time + " | SITREP | Callsign:" + alpha + "| Location:" + bravo + "| Current Objective:" + charlie + "| Level of Supplies:" + delta + "| Equipment Status:" + echo + "| Morale: " + foxtrot + "| Comments: "+ golf +'\n';
+		out = time + " | SITREP | Callsign: " + alpha + " | Location:" + bravo + " | Current Objective: " + charlie + " | Level of Supplies: " + delta + " | Equipment Status: " + echo + " | Morale: " + foxtrot + " | Comments: "+ golf +'\n';
 	document.getElementById('output').value = output  + out;
+	document.getElementById('sitrep_callsign').value ='';
+	document.getElementById('sitrep_grid').value ='';
+	document.getElementById('sitrep_objective').value='';
+	document.getElementById('sitrep_supplies').value='';
+	document.getElementById('sitrep_equipment').value='';
+	document.getElementById('sitrep_morale').value='';
+	document.getElementById('sitrep_comments').value='';
 };
