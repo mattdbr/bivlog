@@ -1,3 +1,5 @@
+Thanks Mitchell McMillan for his JavaScript work. 
+
 All reports are case insensitive:
 
 'sitrep'
