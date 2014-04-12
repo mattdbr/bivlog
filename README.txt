@@ -11,11 +11,12 @@ All reports are case insensitive:
 'maintdem'
 'lost' (or 'lost person')
 'chat'
+'points'
 
 To exit the program:
 
 'finish' (when prompted for a report type). If finish is not entered the file won't save
-(Computer limitation not mine)
+(Computer limitation not mine). In V0.3.2 this was fixed but it is still good practice
 
 Entire radio log will be output into log.txt in the folder.
 
