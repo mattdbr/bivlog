@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from time import ctime	
-oneone,onetwo,onethree,twofour,twofive,twosix,warhawk,vampire,mirage,lightning,sabre,spartan,poseidon,hercules,seafury=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+oneone,onetwo,onethree,twofour,twofive,twosix,alphaone,alphatwo,alphathree,bravofour,bravofive,bravosix,charlieseven,charlieeight,charlienine=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 def pointadder():
 	global oneone
 	global onetwo
@@ -8,15 +8,15 @@ def pointadder():
 	global twofour
 	global twofive
 	global twosix
-	global warhawk
-	global vampire
-	global mirage
-	global lightning
-	global sabre
-	global spartan
-	global poseidon
-	global hercules
-	global seafury
+	global alphaone
+	global alphatwo
+	global alphathree
+	global bravofour
+	global bravofive
+	global bravosix
+	global charlieseven
+	global charlieeight
+	global charlienine
 	if alpha.lower() in ("oneone", "11", "1-1"): 
 		oneone += score
 	elif alpha.lower() in ("1-2", "onetwo", "12"):
@@ -29,27 +29,27 @@ def pointadder():
 		twofive += score
 	elif alpha.lower() in ("2-6", "twosix", "26"):
 		twosix += score
-	elif alpha.lower() == "warhawk":
-		warhawk += score
-	elif alpha.lower() == "vampire":
-		vampire += score
-	elif alpha.lower() == "mirage":
-		mirage += score
-	elif alpha.lower() in ("lightning", "lightening")
-		lightning += score
-	elif alpha.lower() in ("sabre", "saber"):
-		sabre += score
-	elif alpha.lower() == "spartan":
-		spartan += score
-	elif alpha.lower() == "poseidon":
-		poseidon += score
-	elif alpha.lower() == "hercules":
-		hercules += score
-	elif alpha.lower() in ("seafury", "sea fury"):
-		seafury += score
+	elif alpha.lower() in ("a1", "a-1", "alpha 1", "alpha one"):
+		alphaone += score
+	elif alpha.lower() in ("a2", "a-2", "alpha 2", "alpha two"):
+		alphatwo += score
+	elif alpha.lower() in ("a3", "a-3", "alpha 3", "alpha three"):
+		alphathree += score
+	elif alpha.lower() in ("b4", "b-4", "bravo 4", "bravo four"):
+		bravofour += score
+	elif alpha.lower() in ("b5", "b-5", "bravofive", "bravo five"):
+		bravofive += score
+	elif alpha.lower() in ("b6", "b-6", "bravosix", "bravo six"):
+		bravosix += score
+	elif alpha.lower() in ("c7", "c-7", "charlieseven", "charlie seven"):
+		charlieseven += score
+	elif alpha.lower() in ("c8", "c-8", "charlieeight", "charlie eight"):
+		charlieeight += score
+	elif alpha.lower() in ("c9", "c-9", "charlienine", "charlie nine"):
+		charlienine += score
 	else:
 		print("Sorry, I didn't understand the section")
-print("Bivouac Logging Tool. V0.3.4 \n")
+print("Bivouac Logging Tool. V0.4.2 \n")
 print("Written by Matthew Brener (akkatracker) with Javascript porting by Mitchell McMillan (mm865)")
 print("Code avaliable on www.github.com/akkatracker")
 f = open("log.txt", "a")
@@ -61,28 +61,26 @@ report = input("Report type: ")
 while report.lower() != "finish":
 	f = open("log.txt", "a")
 	if report.upper() == "SITREP":
-		alpha = input("Alpha (Callsign): ")
-		bravo = input("Bravo (Grid): ")
-		charlie = input("Charlie (Current objective): ")
-		delta = input("Delta (Level of supplies): ")
-		echo = input("Echo (Equipment status): ")
-		foxtrot = input("Foxtrot (Morale): ")
-		golf = input("Golf (Comments): ")
+		alpha = input("Callsign: ")
+		bravo = input("Alpha (Time): ")
+		charlie = input("Bravo (Own Situation): ")
+		delta = input("Charlie (Situation with regard to third parties): ")
+		echo = input("Delta (Future intentions and relevant info): ")
 		score = int(input("Points Awarded: "))
 		pointadder()
-		print(ctime(),"|", report.upper(), "| Callsign:", alpha, "| Location:", bravo, "| Current Objective:", charlie, "| Level of Supplies:", delta, "| Equipment Status:", echo, "| Morale: ", foxtrot, "| Comments: ", golf, file=f)
+		print(ctime(),"|", report.upper(), "| Callsign:", alpha, "| Time:", bravo, "| Situation of self:", charlie, "| Situation with regard to third parties:", delta, "| Future intentions:", echo, file=f)
 		
 	elif report.upper() == "CASEVAC":
 		duff = input("No Duff or Exercise? ")
-		alpha = input("Alpha (Callsign): ")
-		bravo = input("Bravo (Grid): ")
-		charlie = input("Charlie (Injured Person): ")
-		delta = input("Delta (Urgency): ")
-		echo = input("Echo (Nature of Injury/Illness): ")
-		foxtrot = input("Foxtrot (Walking or Stretcher): ")
-		golf = input("Golf (Any measures required): ")
-		hotel = input("Hotel (Comments): ")
-		print(ctime(),"|", report.upper(), "| No Duff or exercise: ", duff, "| Callsign:", alpha, "| Location:", bravo, "| Injured Person:", charlie, "| Urgency:", delta, "| Injury:", echo, "| Walking or Stretcher: ", foxtrot, "| Any Measures Required: ", golf, "| Comments: ", hotel, file=f)
+		alpha = input("Callsign: ")
+		bravo = input("Priority: ")
+		charlie = input("Alpha One (Number of stretcher cases): ")
+		delta = input("Alpha Two (Number of sitting cases): ")
+		echo = input("Bravo (Requirement of special equipment): ")
+		foxtrot = input("Charlie One (Location of Evacuation): ")
+		golf = input("Charlie Two (Callsign of the ranking person with the casualty): ")
+		hotel = input("Delta (Remarks): ")
+		print(ctime(),"|", report.upper(), "| No Duff or exercise: ", duff, "| Callsign:", alpha, "| Priority:", bravo, "| Stretcher Cases:", charlie, "| Sitting Cases:", delta, "| Special Equipment:", echo, "| Location of evacuation: ", foxtrot, "| Callsign of ranking person with injury: ", golf, "| Remarks: ", hotel, file=f)
 		
 	elif report.upper() == "CONTACT":
 		alpha = input("Alpha (Callsign): ")
@@ -112,12 +110,15 @@ while report.lower() != "finish":
 		
 	elif report.upper() == "NOTICAS":
 		duff = input("No Duff or Exercise? ")
-		alpha = input("Alpha (Callsign): ")
-		bravo = input("Bravo (Grid): ")
-		charlie = input("Charlie (Injured Person): ")
-		delta = input("Delta (Nature of Injury/Illness): ")
-		echo = input("Echo (Grid, Date, Time where injury occurred): ")
-		print(ctime(),"|", report.upper(), "| No Duff or exercise: ", duff, "| Callsign:", alpha, "| Location:", bravo, "| Injured Person:", charlie, "| Injury:", delta, "| Location, Date, Time of injury:", echo, file=f)
+		alpha = input("Callsign: ")
+		bravo = input("Alpha (Rank of Casualty): ")
+		charlie = input("Bravo (Name): ")
+		delta = input("Charlie (Nature of Injury/Illness): ")
+		echo = input("Delta (Grid where injury occurred): ")
+		foxtrot = input("Echo (Time of injury): ")
+		golf = input("Foxtrot (Any treatment administered): ")
+		hotel = input("Golf (Remarks and present location): ")
+		print(ctime(),"|", report.upper(), "| No Duff or exercise: ", duff, "| Callsign:", alpha, "| Rank of Casualty:", bravo, "| Injured Person:", charlie, "| Injury:", delta, "| Location of injury:", echo, "| Time of injury:", foxtrot, "| Treatment administered:", golf, "| Location and remarks:", hotel, file=f)
 		
 	elif report.upper() == "FLOOD":
 		duff = input("No Duff or Exercise? ")
@@ -136,14 +137,20 @@ while report.lower() != "finish":
 		print(ctime(),"|", report.upper(), "| No Duff or exercise: ", duff, "| Callsign:", alpha, "| Location:", bravo, "| Evac Required:", charlie, "| Flood Extent", delta, "| Speed and Direction of water:", echo, "| Terrain: ", foxtrot, "| Number of Personnel: ", golf, "| Comments: ", hotel, "| Action Taken: ", india, "| Casualties: ", juliet, "| Best Route", kilo, "| Other info",lima, file=f)
 		
 	elif report.upper() == "MAINTDEM":
-		alpha = input("Alpha (Callsign): ")
-		bravo = input("Bravo (Grid): ")
-		charlie = input("Charlie (Supplies Required): ")
-		delta = input("Delta (Time and location resupply): ")
-		echo = input("Echo (Any other info): ")
-		print(ctime(),"|", report.upper(), "| Callsign:", alpha, "| Location:", bravo, "| Supplies Required:", charlie, "| Location and Time of resupply", delta, "| Other:", echo, file = f)
+		alpha = input("Callsign: ")
+		bravo = input("Alpha (Demand Number): ")
+		charlie = input("Bravo (Priority): ")
+		delta = input("Charlie One (Quantity of meal packs): ")
+		echo = input("Charlie Two (Quantity of jerries): ")
+		foxtrot = input("Charlie Three (Quantity of fruit): ")
+		golf = input("Charlie Four (Other items and quantities): ")
+		hotel = input("Location of delivery (Grid): ")
+		india = input("Time of delivery: ")
+		juliet = input("Mode of delivery: ")
+		kilo = input("Remarks: ")
+		print(ctime(),"|", report.upper(), "| Callsign:", alpha, "| Demand number:", bravo, "| Priority:", charlie, "| Meal Packs", delta, "| Jerries:", echo, "| Fruit:", foxtrot, "| Other:", golf, "| Location:", hotel, "| Time:", india, "| Mode:", juliet, "| Remarks:", kilo, file = f)
 		
-	elif report.upper() == "LOST PERSON" or report.upper() == "LOST":
+	elif report.upper() in ("LOST PERSON", "LOST"):
 		duff = input("No Duff or Exercise? ")
 		alpha = input("Alpha (Callsign): ")
 		bravo = input("Bravo (Grid): ")
@@ -167,9 +174,33 @@ while report.lower() != "finish":
 		pointadder()
 		print(ctime(),"|", score, "points added to", alpha, file = f)
 	
+	elif report.upper() in ("STRENGTH STATE", "STRENGTH", "STRSTAT"):
+		alpha = input("Section: ")
+		bravo = input("Alpha One (Number of own cadets): ")
+		charlie = input("Alpha Two (Number of attachments): ")
+		delta = input("Alpha Three (Number of airmen or officers): ")
+		echo = input("Bravo One (Number of expected attachments in 24 hours): ")
+		foxtrot = input("Bravo Two (Number of expected detachments in 24 hours): ")
+		golf = input("Charlie (Total number of personnel): ")
+		print(ctime(),"| Callsign:", alpha, "| Number of own cadets:", bravo, "| Number of attachments:", charlie, "| Number of airmen or officers:", delta, "| Number of expected attachments in 24 hours:", echo, "| Number of expected detachments in 24 hours:", foxtrot, "| Total number of personnel:", golf, file = f)
+		
+	elif report.upper() in ("LOCSTAT", "LOCATION"):
+		alpha = input("Section: ")
+		bravo = input("Alpha (Grid): ")
+		charlie = input("Bravo (Stationary or moving): ")
+		delta = input("Charlie (Direction of movement or predicted length of halt): ")
+		print(ctime(),"| Callsign:", alpha, "| Location:", bravo, "| Stationary or moving:", charlie, "| Direction of movement or predicted length of halt:", delta, file = f)
+	
+	elif report.upper() in ("INTREP", "INCIDENT", "INCIDENT REPORT"):
+		alpha = input("Section: ")
+		bravo = input("Alpha (Time of incident): ")
+		charlie = input("Bravo (Location of incident): ")
+		delta = input("Charlie (Description of incident): ")
+		echo = input("Delta (Commander's evaluation of incident): ")
+		print(ctime(),"| Callsign:", alpha, "| Time of incident:", bravo, "| Location of incident:", charlie, "| Description of incident:", delta, "| Commander's evaluation", echo, file = f)
 	else:
 		print("Could not detect report type, read the readme for usage")
 	print("")
 	report = input("Report type: ")	
-	print("***Points***: 1-1:",oneone, "| 1-2:", onetwo, "| 1-3:", onethree, "| 2-4:", twofour, "| 2-5:", twofive, "| 2-6:", twosix, "| WarHawk:", warhawk, "| Vampire:", vampire, "| Mirage:", mirage, "| Lightning:", lightning, "| Sabre:", sabre, "| Spartan:", spartan, "| Poseidon:", poseidon, "| Hercules:", hercules, "| Seafury:", seafury, file = f)
+	print("***Points***: 1-1:",oneone, "| 1-2:", onetwo, "| 1-3:", onethree, "| 2-4:", twofour, "| 2-5:", twofive, "| 2-6:", twosix, "| Alpha 1:", alphaone, "| Alpha 2:", alphatwo, "| Alpha 3:", alphathree, "| Bravo 1:", bravofour, "| Bravo 2:", bravofive, "| Bravo 3:", bravosix, "| Charlie 1:", charlieseven, "| Charlie 2:", charlieeight, "| Charlie 3:", charlienine, file = f)
 	f.close()
